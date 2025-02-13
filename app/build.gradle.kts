@@ -52,10 +52,10 @@ android {
 dependencies {
     implementation(project(":core:design"))
 
-    implementation(project(":features:home"))
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.material3.android)
+    implementation(libs.androidx.navigation.compose)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
