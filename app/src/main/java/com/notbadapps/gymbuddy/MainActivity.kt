@@ -5,14 +5,14 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import com.notbadapps.features.home.HomeScreen
-import com.notbadapps.gymbuddy.ui.theme.GymBuddyTheme
+import com.notbadapps.core.design.theme.MainTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            GymBuddyTheme {
+            MainTheme {
                 HomeScreen()
             }
         }

@@ -1,4 +1,4 @@
-package com.notbadapps.gymbuddy.ui.theme
+package com.notbadapps.core.design.theme
 
 import androidx.compose.ui.graphics.Color
 

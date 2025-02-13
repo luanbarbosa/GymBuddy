@@ -1,4 +1,4 @@
-package com.notbadapps.gymbuddy.ui.theme
+package com.notbadapps.core.design.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -31,7 +31,7 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun GymBuddyTheme(
+fun MainTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
