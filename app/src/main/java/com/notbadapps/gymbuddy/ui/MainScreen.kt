@@ -7,7 +7,7 @@ import androidx.compose.ui.Modifier
 import com.notbadapps.gymbuddy.ui.navigation.NavigationGraph
 
 @Composable
-fun HomeScreen() {
+fun MainScreen() {
     Box(
         modifier = Modifier.fillMaxSize(),
     ) {

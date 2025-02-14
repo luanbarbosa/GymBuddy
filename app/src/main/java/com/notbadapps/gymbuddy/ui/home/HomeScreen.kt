@@ -1,4 +1,4 @@
-package com.notbadapps.gymbuddy.ui.dashboard
+package com.notbadapps.gymbuddy.ui.home
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.layout.Arrangement.spacedBy
@@ -12,7 +12,7 @@ import androidx.navigation.NavController
 import com.notbadapps.gymbuddy.ui.navigation.Screen
 
 @Composable
-fun DashboardScreen(navController: NavController) {
+fun HomeScreen(navController: NavController) {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -21,7 +21,7 @@ fun DashboardScreen(navController: NavController) {
     ) {
 
         Text(
-            text = "Dashboard",
+            text = "Home",
             modifier = Modifier.align(Alignment.TopCenter),
         )
 
@@ -32,13 +32,19 @@ fun DashboardScreen(navController: NavController) {
             Button(
                 onClick = { navController.navigate(route = Screen.RoutineEditor.route) },
                 content = {
-                    Text("Edit exercise")
+                    Text("Edit routine X")
                 },
             )
             Button(
                 onClick = { navController.navigate(route = Screen.ExerciseEditor.route) },
                 content = {
-                    Text("new routine")
+                    Text("Edit exercise Y")
+                },
+            )
+            Button(
+                onClick = { navController.navigate(route = Screen.Player.route) },
+                content = {
+                    Text("Play routine Z")
                 },
             )
         }
