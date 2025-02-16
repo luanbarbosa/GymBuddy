@@ -9,6 +9,7 @@ data class ExerciseDto(
     val exerciseId: Long,
     val name: String,
     val description: String?,
+    // TODO FIX this needs to be mapped from the sealed value into str and back
     val muscleGroup: String,
     val sets: Int? = null,
     val repetitions: Int? = null,

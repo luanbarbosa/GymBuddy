@@ -12,4 +12,8 @@ import com.notbadapps.core.data.local.database.model.RoutineDto
 )
 abstract class AppDatabase : RoomDatabase() {
     abstract fun routineDao(): RoutineDao
+
+    companion object {
+        const val DATABASE_NAME = "app-database.db"
+    }
 }

@@ -10,5 +10,5 @@ interface RoutineDao {
 
     @Transaction
     @Query("SELECT * FROM routine")
-    fun getAll(): List<RoutineWithExercises>
+    suspend fun getAll(): List<RoutineWithExercises>
 }

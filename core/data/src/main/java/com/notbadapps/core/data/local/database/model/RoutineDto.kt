@@ -21,5 +21,5 @@ data class RoutineWithExercises(
         parentColumn = "routineId",
         entityColumn = "exerciseId"
     )
-    val exercise: List<ExerciseDto>
+    val exercises: List<ExerciseDto>
 )
