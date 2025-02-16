@@ -1,10 +1,15 @@
 package com.notbadapps.core.data.model
 
-data class Exercise(
+data class Movement(
+    val id: Long,
     val name: String,
     val description: String?,
     val muscleGroup: MuscleGroup,
-    val mediaResources: MediaResources?,
+)
+
+data class Exercise(
+    val id: Long,
+    val movement: Movement,
     val executionParams: ExecutionParams? = null,
 )
 
@@ -13,9 +18,4 @@ data class ExecutionParams(
     val repetitions: Int? = null,
     val weight: Float? = null,
     val notes: String? = null,
-)
-
-data class MediaResources(
-    val images: List<String>,
-    val videos: List<String>,
 )

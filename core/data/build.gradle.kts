@@ -44,4 +44,5 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.room.ktx)
 }
