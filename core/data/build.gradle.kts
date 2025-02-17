@@ -47,7 +47,8 @@ android {
 
 dependencies {
     implementation(libs.androidx.room.ktx)
-
+    implementation(libs.gson)
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
+
 }
