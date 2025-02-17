@@ -4,16 +4,16 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Transaction
-import com.notbadapps.core.data.local.database.model.RoutineDto
+import com.notbadapps.core.data.local.database.model.ExerciseDto
 
 @Dao
-interface RoutineDao {
+interface ExerciseDao {
 
     @Transaction
-    @Query("SELECT * FROM routine")
-    suspend fun getAll(): List<RoutineDto>
+    @Query("SELECT * FROM exercise")
+    suspend fun getAll(): List<ExerciseDto>
 
     @Transaction
     @Insert
-    suspend fun insert(routine: RoutineDto)
+    suspend fun insert(exercise: ExerciseDto)
 }

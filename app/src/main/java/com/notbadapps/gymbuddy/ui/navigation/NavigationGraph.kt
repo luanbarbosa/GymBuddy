@@ -13,14 +13,20 @@ import com.notbadapps.gymbuddy.ui.settings.SettingsScreen
 import com.notbadapps.gymbuddy.ui.statistics.StatisticsScreen
 
 @Composable
-fun NavigationGraph(navController: NavHostController) {
+fun NavigationGraph(
+    navController: NavHostController,
+    onAddRandomExercise: () -> Unit,
+) {
     NavHost(
         navController = navController,
         startDestination = Screen.Home.route
     ) {
         // main navigation screens
         composable(route = Screen.Home.route) {
-            HomeScreen(navController = navController)
+            HomeScreen(
+                navController = navController,
+                onAddRandomExercise = onAddRandomExercise,
+            )
         }
         composable(route = Screen.Settings.route) {
             SettingsScreen(navController = navController)

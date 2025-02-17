@@ -1,6 +1,7 @@
 package com.notbadapps.core.data.model
 
 data class Movement(
+    val id: Long,
     val name: String,
     val description: String?,
     val muscleGroup: MuscleGroup,

@@ -1,5 +1,6 @@
 package com.notbadapps.core.data.local.database.model
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.notbadapps.core.data.model.MuscleGroup
@@ -7,6 +8,7 @@ import com.notbadapps.core.data.model.MuscleGroup
 @Entity(tableName = "exercise")
 data class ExerciseDto(
     @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = EXERCISE_ID_KEY_NAME)
     val exerciseId: Long,
     val name: String,
     val description: String?,
@@ -15,4 +17,8 @@ data class ExerciseDto(
     val repetitions: Int? = null,
     val weight: Float? = null,
     val notes: String? = null,
-)
+) {
+    companion object {
+        const val EXERCISE_ID_KEY_NAME = "routine_id"
+    }
+}

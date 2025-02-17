@@ -1,25 +1,17 @@
 package com.notbadapps.core.data.local.database.model
 
-import androidx.room.Embedded
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import androidx.room.Relation
-import com.notbadapps.core.data.model.Exercise
-import com.notbadapps.core.data.model.Routine
 
 @Entity(tableName = "routine")
 data class RoutineDto(
     @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = ROUTINE_ID_KEY_NAME)
     val routineId: Long,
     val name: String,
-)
-
-data class RoutineWithExercises(
-    @Embedded
-    val routine: RoutineDto,
-    @Relation(
-        parentColumn = "routineId",
-        entityColumn = "exerciseId"
-    )
-    val exercises: List<ExerciseDto>
-)
+) {
+    companion object {
+        const val ROUTINE_ID_KEY_NAME = "routine_id"
+    }
+}

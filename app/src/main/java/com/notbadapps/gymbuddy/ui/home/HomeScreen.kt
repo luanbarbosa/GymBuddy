@@ -5,14 +5,19 @@ import androidx.compose.foundation.layout.Arrangement.spacedBy
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.notbadapps.gymbuddy.ui.navigation.Screen
+import kotlinx.coroutines.launch
 
 @Composable
-fun HomeScreen(navController: NavController) {
+fun HomeScreen(
+    navController: NavController,
+    onAddRandomExercise: () -> Unit,
+) {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -45,6 +50,15 @@ fun HomeScreen(navController: NavController) {
                 onClick = { navController.navigate(route = Screen.Player.route) },
                 content = {
                     Text("Play routine Z")
+                },
+            )
+
+            Button(
+                onClick = {
+                   onAddRandomExercise()
+                },
+                content = {
+                    Text("Add random exercise")
                 },
             )
         }
